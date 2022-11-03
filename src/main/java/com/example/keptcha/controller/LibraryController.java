@@ -26,9 +26,14 @@ public class LibraryController {
 
     }
 
-    @GetMapping ("/getAll")
+    @GetMapping ("/getAllBooksInLibrary")
     List<Book> getAll(){
       return   service.getAllBooks();
+    }
+
+    @PostMapping("/deleteBook/{id}")
+    String deleteBook(){
+
     }
 
 

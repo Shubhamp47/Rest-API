@@ -29,4 +29,22 @@ public class LibraryService {
 
         return bookRepo.findAll();
     }
+
+    public  String deleteBook(int id){
+
+
+        try {
+            bookRepo.deleteById(id);
+
+            return "Success in deleting";
+
+        }
+        catch (Exception e){
+
+            return "Some Issue In deltion";
+        }
+
+
+
+    }
 }
