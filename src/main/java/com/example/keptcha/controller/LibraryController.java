@@ -32,10 +32,10 @@ public class LibraryController {
     }
 
     @PostMapping("/deleteBook/{id}")
-    String deleteBook(@PathVariable int bookId){
+    String deleteBook(@PathVariable int id){
 
         try {
-            service.deleteBook(bookId);
+            service.deleteBook(id);
             return "Success";
     }
         catch (Exception e){
