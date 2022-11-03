@@ -30,19 +30,14 @@ public class LibraryService {
         return bookRepo.findAll();
     }
 
-    public  String deleteBook(int id){
+    public  String deleteBook(int id) throws Exception{
 
 
-        try {
             bookRepo.deleteById(id);
 
             return "Success in deleting";
 
-        }
-        catch (Exception e){
 
-            return "Some Issue In deltion";
-        }
 
 
 
